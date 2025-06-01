@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking - MR Klin Laundry</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/booking.js" defer></script>
+</head>
+<body>
+  <div class="dashboard-wrapper">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <h2>MR KLIN LAUNDRY</h2>
+        <p>NO.1 FRANCHISE LAUNDRY SEJAK 2009</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="payment.html">💳 Pembayaran</a></li>
+          <li><a href="booking.html">📅 Pemesanan</a></li>
+          <li><a href="riwayat.html">📄 Riwayat Pemesanan</a></li>
+          <li><a href="apps.html">🧩 APPS</a></li>
+          <li><a href="hubungi-kami.html">📞 Hubungi Kami</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <header class="topbar">
+        <div class="top-left">
+          <a href="#">Home</a>
+          <a href="#">About Us</a>
+        </div>
+        <div class="top-right">
+          <input type="text" placeholder="Search..." />
+          <button>Search</button>
+          <span class="profile-icon">👤</span>
+        </div>
+      </header>
+
+      <main class="booking-container">
+        <div class="booking-list">
+          <h2>Booking List</h2>
+          <div class="calendar-box">
+            <p>Gunakan tanggal antara Januari – Desember 2025</p>
+            <table class="calendar">
+              <tr>
+                <th>Sen</th><th>Sel</th><th>Rab</th><th>Kam</th><th>Jum</th><th>Sab</th><th>Min</th>
+              </tr>
+              <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+              <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td></tr>
+              <tr><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td></tr>
+              <tr><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td></tr>
+              <tr><td>29</td><td>30</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="booking-form">
+          <h2>Booking Form</h2>
+          <p>Pickup & Delivery</p>
+
+          <div class="time-options">
+            <button type="button" class="time-slot">08.00 - 10.00</button>
+            <button type="button" class="time-slot">10.00 - 12.00</button>
+            <button type="button" class="time-slot">14.00 - 16.00</button>
+          </div>
+
+          <form id="bookingForm">
+            <label for="tanggal">Pilih Tanggal Booking:</label>
+            <input type="date" id="tanggal" name="tanggal" min="2025-01-01" max="2025-12-31" required />
+
+            <input type="text" id="nama" placeholder="Nama" required />
+            <input type="text" id="alamat" placeholder="Alamat" required />
+            <input type="tel" id="hp1" placeholder="No Handphone" required />
+            <input type="tel" id="hp2" placeholder="No Handphone Cadangan" />
+
+            <button type="submit" class="btn-booking">BOOKING</button>
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

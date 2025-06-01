@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MR Klin Laundry - Login</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="left-panel">
+      <h1>MR KLIN LAUNDRY</h1>
+      <p>NO.1 FRANCHISE LAUNDRY SEJAK 2009</p>
+      <a href="#" class="btn-start">GET STARTED</a>
+    </div>
+
+    <div class="right-panel">
+      <div class="form-box">
+        <h2>Register</h2>
+        <p>Ayo Mendaftar Menjadi Member<br><a href="#">Sudah Punya Akun? Login</a></p>
+
+        <form id="loginForm">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Masukkan nama" required />
+
+          <label for="alamat">Alamat</label>
+          <input type="text" id="alamat" placeholder="Masukkan alamat" required />
+
+          <label for="password">Password</label>
+          <div class="password-row">
+            <input type="password" id="password" placeholder="Password" required />
+            <input type="password" placeholder="Ulangi" required />
+          </div>
+
+          <div class="checkbox">
+            <input type="checkbox" id="setuju" required />
+            <label for="setuju">Telah Menyetujui persyaratan dan kontrak kami</label>
+          </div>
+
+          <button type="submit" class="btn-daftar">DAFTAR</button>
+          <button type="button" class="btn-google">Mendaftar dengan Google</button>
+          <button type="button" onclick="masukSebagaiTamu()" class="btn-login">Sudah Punya Akun</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/login.js"></script>
+</body>
+</html>

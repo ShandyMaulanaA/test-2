@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pembayaran - MR Klin Laundry</title>
+  <link rel="stylesheet" href="css/payment-style.css" />
+  <script src="js/payment.js" defer></script>
+</head>
+<body>
+  <div class="main-content">
+    <header class="topbar">
+      <div class="top-left">
+        <h2>MR KLIN LAUNDRY</h2>
+      </div>
+      <div class="top-right">
+        <a href="#">Home</a>
+        <a href="#">Help</a>
+        <input type="text" placeholder="Search..." />
+        <button>Search</button>
+        <span class="profile-icon">👤</span>
+      </div>
+    </header>
+
+    <main class="payment-container">
+      <h2>PILIH METODE PEMBAYARAN</h2>
+
+      <form id="paymentForm" class="payment-options">
+        <label><input type="radio" name="metode" value="Tunai" /> 💵 Tunai</label>
+        <label><input type="radio" name="metode" value="Transfer Bank" /> 🏦 Bank Transfer</label>
+        <label><input type="radio" name="metode" value="Virtual Account" /> 🧾 Virtual Account</label>
+        <label><input type="radio" name="metode" value="QRIS" /> 📱 QRIS</label>
+        <label><input type="radio" name="metode" value="Kartu Kredit" /> 💳 Kartu Kredit</label>
+
+        <button type="submit" class="btn-booking">Konfirmasi Pembayaran</button>
+      </form>
+    </main>
+  </div>
+</body>
+</html>

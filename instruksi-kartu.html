@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kartu Kredit</title>
+  <link rel="stylesheet" href="css/instruksi-qris-style.css" />
+  <script>
+    function selesaiPembayaran() {
+      const booking = JSON.parse(localStorage.getItem("bookingData"));
+      const order = JSON.parse(localStorage.getItem("orderData"));
+      const metode = localStorage.getItem("paymentMethod");
+
+      const riwayat = { booking, order, metode, status: "Selesai (Kartu Kredit)" };
+      const semua = JSON.parse(localStorage.getItem("riwayatPesanan")) || [];
+semua.push(riwayat);
+localStorage.setItem("riwayatPesanan", JSON.stringify(semua));
+window.location.href = "riwayat.html";
+    }
+  </script>
+</head>
+<body>
+  <div class="transfer-wrapper">
+    <h2>💳 Kartu Kredit</h2>
+    <p>Silakan masukkan detail kartu kredit Anda di bawah ini:</p>
+    <form style="display: flex; flex-direction: column; gap: 0.7rem; margin: 1rem 0;">
+      <input type="text" placeholder="Nama di Kartu" required />
+      <input type="text" placeholder="Nomor Kartu" required />
+      <div style="display: flex; gap: 0.5rem;">
+        <input type="text" placeholder="MM / YY" required style="flex:1;" />
+        <input type="text" placeholder="CVC" required style="flex:1;" />
+      </div>
+    </form>
+    <button style="margin-bottom: 1rem;">Konfirmasi</button>
+    <button onclick="selesaiPembayaran()">Lihat Detail Pesanan</button>
+  </div>
+</body>
+</html>

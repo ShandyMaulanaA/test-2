@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Instruksi Pembayaran - QRIS</title>
+  <link rel="stylesheet" href="css/instruksi-qris-style.css" />
+  <script>
+    function selesaiPembayaran() {
+      const booking = JSON.parse(localStorage.getItem("bookingData"));
+      const order = JSON.parse(localStorage.getItem("orderData"));
+      const metode = localStorage.getItem("paymentMethod");
+
+      const riwayat = {
+        booking,
+        order,
+        metode,
+        status: "Selesai (QRIS)"
+      };
+
+      const semua = JSON.parse(localStorage.getItem("riwayatPesanan")) || [];
+semua.push(riwayat);
+localStorage.setItem("riwayatPesanan", JSON.stringify(semua));
+      window.location.href = "riwayat.html";
+    }
+  </script>
+</head>
+<body>
+  <div class="transfer-wrapper">
+    <h2>📱 Pembayaran QRIS</h2>
+    <p>Scan QR Code berikut menggunakan aplikasi e-wallet atau m-banking:</p>
+    <div class="rekening-box">
+      <img src="assets/img/qris-placeholder.png" alt="QRIS" style="width: 200px;" />
+    </div>
+    <ul>
+      <li>Pastikan nominal pembayaran sesuai total tagihan.</li>
+      <li>Transaksi akan terverifikasi otomatis.</li>
+    </ul>
+    <button onclick="selesaiPembayaran()">Lihat Detail Pesanan</button>
+  </div>
+</body>
+</html>

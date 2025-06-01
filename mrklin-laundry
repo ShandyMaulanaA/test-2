@@ -1,0 +1,22 @@
+mrklin-laundry/
+│
+├── index.html
+├── booking.html
+├── order.html
+├── payment.html
+├── riwayat.html
+├── instruksi-transfer.html
+├── instruksi-va.html
+├── instruksi-qris.html
+├── instruksi-kartu.html
+├── instruksi-tunai.html
+│
+├── css/
+│   └── style.css
+├── js/
+│   ├── booking.js
+│   ├── order.js
+│   ├── payment.js
+│   └── riwayat.js
+└── assets/
+    └── img/

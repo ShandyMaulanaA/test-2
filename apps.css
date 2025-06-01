@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f0f8ff;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.promo-wrapper {
+  max-width: 960px;
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  text-align: center;
+}
+
+.promo-header img {
+  width: 100px;
+  margin-bottom: 1rem;
+}
+
+.promo-header h1 {
+  font-size: 2rem;
+  color: #1d3557;
+  margin-bottom: 0.5rem;
+}
+
+.promo-header p {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.promo-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.btn-download,
+.btn-back {
+  text-decoration: none;
+  background-color: #69a8f5;
+  color: white;
+  padding: 0.9rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-download:hover,
+.btn-back:hover {
+  background-color: #468be0;
+}
+
+.btn-back {
+  background-color: #ccc;
+  color: #333;
+}
+
+.promo-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.feature {
+  background-color: #f9fbff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+}
+
+.feature img {
+  width: 48px;
+  margin-bottom: 1rem;
+}
+
+.feature h3 {
+  color: #1d3557;
+  margin-bottom: 0.5rem;
+}
+
+.feature p {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.promo-footer {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #999;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Instruksi Pembayaran - Bank Transfer</title>
+  <link rel="stylesheet" href="css/instruksi-transfer.css" />
+  <script>
+    function selesaiPembayaran() {
+      // Ambil semua data
+      const booking = JSON.parse(localStorage.getItem("bookingData"));
+      const order = JSON.parse(localStorage.getItem("orderData"));
+      const metode = localStorage.getItem("paymentMethod");
+
+      // Simpan ke riwayat
+      const riwayat = {
+        booking,
+        order,
+        metode,
+        status: "Selesai (Transfer)"
+      };
+
+      const semua = JSON.parse(localStorage.getItem("riwayatPesanan")) || [];
+semua.push(riwayat);
+localStorage.setItem("riwayatPesanan", JSON.stringify(semua));
+      window.location.href = "riwayat.html";
+    }
+  </script>
+  <style>
+    .transfer-wrapper {
+      max-width: 500px;
+      margin: 3rem auto;
+      padding: 2rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff;
+    }
+
+    .rekening-box {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      padding: 1rem;
+      background-color: #f0f8ff;
+      border-radius: 8px;
+      border: 1px dashed #999;
+    }
+
+    ul {
+      text-align: left;
+      margin-top: 1rem;
+    }
+
+    button {
+      margin-top: 2rem;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      background-color: #69a8f5;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #3e8ddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="transfer-wrapper">
+    <h2>🏦 Bank Transfer</h2>
+    <p>Silakan transfer ke rekening berikut:</p>
+
+    <div class="rekening-box">
+      <strong>0123456789</strong><br />
+      Nama Pemilik: <strong>MR KLIN LAUNDRY</strong>
+    </div>
+
+    <h3>Instruksi Pembayaran</h3>
+    <ul>
+      <li>Transfer ke rekening di atas sesuai total pesanan</li>
+      <li>Gunakan nama lengkap saat transfer</li>
+      <li>Pembayaran akan dikonfirmasi otomatis</li>
+    </ul>
+
+    <button onclick="selesaiPembayaran()">Lihat Detail Pesanan</button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halaman Lacak Status</title>
+  <link rel="stylesheet" href="css/riwayat-style.css" />
+  <script src="js/tracking.js" defer></script>
+</head>
+<body>
+  <div class="tracking-page">
+    <h2>Pelacakan Status Pesanan</h2>
+
+    <div class="tracking-summary">
+      <span id="orderCode"></span>
+      <span id="orderDate"></span>
+      <span id="orderInfo"></span>
+    </div>
+
+    <div class="tracking-steps">
+      <div class="step" id="step-0">
+        <img src="images/calendar.png" alt="Jadwal" />
+        <p>Dijadwalkan</p>
+      </div>
+      <div class="step" id="step-1">
+        <img src="images/wash.png" alt="Cuci" />
+        <p>Dicuci</p>
+      </div>
+      <div class="step" id="step-2">
+        <img src="images/iron.png" alt="Setrika" />
+        <p>Disetrika</p>
+      </div>
+      <div class="step" id="step-3">
+        <img src="images/check.png" alt="Selesai" />
+        <p>Selesai</p>
+      </div>
+    </div>
+
+    <div class="tracking-detail">
+      <h3>Detail Pesanan</h3>
+      <p><strong>Tanggal Penjemputan:</strong> <span id="detailTanggal"></span></p>
+      <p><strong>Alamat:</strong> <span id="detailAlamat"></span></p>
+      <p><strong>Catatan:</strong> <span id="detailCatatan"></span></p>
+    </div>
+  </div>
+</body>
+</html>
