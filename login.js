@@ -2,7 +2,7 @@ function masukSebagaiTamu() {
   // Simulasi login tamu
   localStorage.setItem("userName", "Tamu");
   localStorage.setItem("userPhone", "0000000000");
-  window.location.href = "dashboard.html";
+  window.location.href ="dashboard.html";
 }
 
 document.getElementById("loginForm").addEventListener("submit", function (e) {
@@ -12,6 +12,6 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 
   localStorage.setItem("userName", username);
   localStorage.setItem("userAddress", alamat);
-  window.location.href = "dashboard.html";
+  window.location.href ="dashboard.html";
 });
 
